@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta name="viewport" content="width=device-width,height=device-height,user-scalable=no">
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="CSS/style.css"/>
+        <link rel="stylesheet" href="CSS/globalstyle.css"/>
+        <link rel="stylesheet" href="CSS/animate.css"/>
+    </head>
+    <bounceIn>
+        <header>
+            <img src="img/logo.png" id="logo" class="animated flipInY"/>
+        </header>
+        <div id="pagina">
+            <div id="menu-hidden" onclick="menuResponsivo()"><span>MENU</span><img src="img/menu.png"/></div>
+            <div id="menu">
+                <a href="index.html" class="animated lightSpeedIn item_menu">HOME</a>
+                <a href="categorias.html" class="animated lightSpeedIn item_menu">Categorias</a>
+                <a href="#" class="animated lightSpeedIn item_menu">Nossa&nbsp;Loja</a>
+                <a href="#" class="animated lightSpeedIn item_menu">Contato</a>
+            </div>
+            <div id="container">
+                <div class="slideshow-container">
+                    <div class="alternacao">
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    </div>
+                    <div class="produto-slide">
+                        <div class="animated bounceIn produto violao giannini_flat" onclick="startModal(event, 'first')"><h5 class="preco">preço: R$5,00</h5></div>
+                        <div class="animated fadeIn modal first">
+                            <!-- Modal content -->
+                            <div class=" animated bounceInUp modal-content">
+                                <div class="modal-header">
+                                    <span class="close">&times;</span>
+                                    <h2>Modal Header1</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="produto violao giannini_flat"></div>
+                                    <div class="produto_especificacao">
+                                        <h6>nome do produto</h6>
+                                        <p>Descrição do produto</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="animated bounceIn produto baixo sunburst_tagima" onclick="startModal(event, 'second')"><h5 class="preco">preço: R$5,00</h5></div>
+                        <div class="animated fadeIn modal second">
+                            <!-- Modal content -->
+                            <div class=" animated bounceInUp modal-content">
+                                <div class="modal-header">
+                                    <span class="close">&times;</span>
+                                    <h2>Modal Header2</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="produto baixo sunburst_tagima"></div>
+                                    <div class="produto_especificacao">
+                                        <h6>nome do produto</h6>
+                                        <p>Descrição do produto</p>                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="produto-slide">
+                        <div class="animated bounceIn produto teclado casio_ctk" onclick="startModal(event, 'third')"><h5 class="preco">preço: R$5,00</h5></div>
+                        <div class="animated fadeIn modal third">
+                            <!-- Modal content -->
+                            <div class=" animated bounceInUp modal-content">
+                                <div class="modal-header">
+                                    <span class="close">&times;</span>
+                                    <h2>Modal Header3</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="produto teclado casio_ctk"></div>
+                                    <div class="produto_especificacao">
+                                        <h6>nome do produto</h6>
+                                        <p>Descrição do produto</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="animated bounceIn produto teclado akai_mpk" onclick="startModal(event, 'fourth')"><h5 class="preco">preço: R$5,00</h5></div>
+                        <div class="animated fadeIn modal fourth">
+                            <!-- Modal content -->
+                            <div class=" animated bounceInUp modal-content">
+                                <div class="modal-header">
+                                    <span class="close">&times;</span>
+                                    <h2>Modal Header4</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="produto teclado akai_mpk"></div>
+                                    <div class="produto_especificacao">
+                                        <h6>nome do produto</h6>
+                                        <p>Descrição do produto</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="produto-slide">
+                        <div class="animated bounceIn produto bateria dixion_riot" onclick="startModal(event, 'fifth')"><h5 class="preco">preço: R$5,00</h5></div>
+                        <div class="animated fadeIn modal fifth">
+                            <!-- Modal content -->
+                            <div class=" animated bounceInUp modal-content">
+                                <div class="modal-header">
+                                    <span class="close">&times;</span>
+                                    <h2>Modal Header5</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="produto bateria dixion_riot"></div>
+                                    <div class="produto_especificacao">
+                                        <h6>nome do produto</h6>
+                                        <p>Descrição do produto</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="animated bounceIn produto baixo sanders" onclick="startModal(event, 'sixth')"><h5 class="preco">preço: R$5,00</h5></div>
+                        <div class="animated fadeIn modal sixth">
+                            <!-- Modal content -->
+                            <div class=" animated bounceInUp modal-content">
+                                <div class="modal-header">
+                                    <span class="close">&times;</span>
+                                    <h2>Modal Header6</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="produto baixo sanders"></div>
+                                    <div class="produto_especificacao">
+                                        <h6>nome do produto</h6>
+                                        <p>Descrição do produto</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="alternacao">
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                </div>
+                <br>
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+            </div>
+        </div>
+        <footer></footer>
+        <script src="js/menu.js">// MENU </script>
+        <script>
+            var slideIndex = 1;
+			showSlides(slideIndex);
+			
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
+			
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+			
+			function showSlides(n) {
+			  var i;
+			  var slides = document.getElementsByClassName("produto-slide");
+			  var dots = document.getElementsByClassName("dot");
+			  if (n > slides.length) {slideIndex = 1}    
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+			      slides[i].style.display = "none";  
+			  }
+			  for (i = 0; i < dots.length; i++) {
+			      dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "flex";
+			}    
+        </script>
+        <script src="js/modal.js">// MODAL </script>
+    </body>
+</html>

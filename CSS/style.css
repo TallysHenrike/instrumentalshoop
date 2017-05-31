@@ -1,0 +1,399 @@
+@charset "UTF-8";
+header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height:inherit;
+    background: black url(../img/banner.jpg) no-repeat right;
+    box-shadow: 2px 2px 10px;
+}
+#logo{
+    height: 320px;
+}
+header:after {
+    color: #ef8b20;
+    font-size: 5rem;
+    text-shadow: 0px 0px 5px #ef8b20;
+    transform: rotate(-6deg);
+    font-family: 'Pacifico', cursive;
+    content: "Instrumental shoop";
+}
+#pagina{
+    width: 85%;
+    height:inherit;
+    margin: auto;
+    margin-top: -30px;
+    border-radius: 5px 5px 0px 0px;
+}
+/* MENU */
+#menu-hidden{
+    width: 100%;
+    height: 60px;
+    padding-left: 30px;
+    border-radius: 5px;
+    background-color: #555;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+}
+#menu-hidden img{
+    border-radius: 0px 5px 5px 0px;
+    height:60px;
+}
+#menu{
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+    background-color: #555;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    box-shadow: 2px 2px 10px;
+}
+.item_menu{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #666;
+    border-left: 1px solid #444;
+}
+.item_menu:nth-of-type(1){
+    border-right: 1px solid #666;
+    border-left: 0px;
+}
+.item_menu:nth-of-type(4){
+    border-right: 0px;
+    border-left: 1px solid #444;
+}
+/* SLIDESHOW */
+.produto-slide {
+    display:none;
+    justify-content:space-around;
+    width: 90%;
+    height: 320px;
+    background-color: #fff;
+}
+/* Slideshow container */
+.slideshow-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px;
+    background-color: #0ff;
+}
+.alternacao{
+    width: 5%;
+    text-align: center;
+    font-size: 4rem;
+}
+.alternacao a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: pointer;
+}
+/* CATEGORIAS */
+#container{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+}
+#categorias{
+    width: 25%;
+    margin: 10px 0px;
+    border-radius: 5px;
+    background-color: #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 2px 10px;
+}
+#span{
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    border-radius: 5px 5px 0px 0px;
+    border-bottom: 4px solid #ef3b20;
+    display: flex;
+    align-items: center;
+    background-color: #ef8b20;
+}
+.instrumento_categoria:nth-of-type(2){
+    border-top: 0px;
+}
+.instrumento_categoria{
+    display: block;
+    width: 100%;
+    height: 30px;
+    margin-top: 4px;
+    border-top: 1px solid black;
+}
+.instrumento_categoria a{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+    display: block;
+}
+/*----- Search -----*/
+.search-form {
+    width: 90%;
+    box-shadow: 2px 2px 10px;
+    display: flex;
+} 
+.search-form input[type="text"] {
+    width:100%;
+    height:30px;
+    padding:0px 8px;
+    border-radius:5px;
+    font-size:13px;
+}
+.search-form2 {
+    display: none;
+    box-shadow: 2px 2px 10px;
+    margin-left: 100px;
+    padding: 0px 8px;
+}
+.search-form2 input[type="text"] {
+    width:100%;
+    height:40px;
+    border-radius:5px 0px 0px 5px;
+    font-size:13px;
+}
+/* produtos */
+#produtos{
+    width: 75%;
+}
+#flex{
+    display: flex;
+    flex-flow: row wrap;
+    align-items:center;
+    justify-content:space-around;
+}
+.produto{
+    cursor: pointer;
+    flex: auto;
+    display: flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+    max-width: 350px;
+    width: 250px;
+    height: 300px;
+    margin: 10px;
+    background-size: 100% auto;    
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    justify-content: center;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content */
+.modal-content {
+    position: fixed;
+    border-radius: 5px;
+    bottom: 0;
+    box-shadow: 2px 2px 10px;
+    background-color: #fefefe;
+    width: 70%;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+}
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-header {
+    padding: 2px 16px;
+    box-shadow: 2px 2px 10px;
+    border-radius: 5px 5px 0px 0px;
+    background-color: #0ff;
+}
+.modal-body {
+    display: flex;
+    justify-content: space-around;
+    padding: 2px 16px;
+}
+.produto_especificacao{
+    flex: auto;
+    display: flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+    max-width: 500px;
+    height: 300px;
+    margin: 10px;
+    border: 2px solid #555;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+.preco{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    background-color: #0ff;
+    border-radius: 5px 5px 0px 0px;
+    border-bottom: 3px solid rgba(0,0,0,.2);
+}
+/* violao */
+.giannini_flat{
+    background-image: url(../img/giannini_flat.jpg);
+}
+.fender_dreadnought{
+    background-image: url(../img/fender_dreadnought.jpg);
+}
+/* violao */
+/* teclado */
+.casio_ctk{
+    background-image: url(../img/casio_ctk.jpg);
+}
+.akai_mpk{
+    background-image: url(../img/akai_mpk.jpg);
+}
+/* teclado */
+/* bateria */
+.dixion_riot{
+    background-image: url(../img/dixion_riot.jpg);
+}
+.roland_td-1k{
+    background-image: url(../img/roland_td-1k.jpg);
+}
+/* bateria */
+/* guitarra */
+.tagima_memphis{
+    background-image: url(../img/tagima_memphis.jpg);
+}
+.strato_winner{
+    background-image: url(../img/strato_winner.jpg);
+}
+/* guitarra */
+/* baixo */
+.sunburst_tagima{
+    background-image: url(../img/sunburst_tagima.jpg);
+}
+.sanders{
+    background-image: url(../img/sanders.jpg);
+}
+/* baixo */
+footer{
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+    background: #555;
+    box-shadow: 2px 2px 10px;
+}
+/* RESPONSIVO */
+@media only screen and (max-width: 768px){
+    #logo{
+        height: 260px;
+    }
+    header:after {
+        content: " ";
+    }
+    #menu-hidden{
+        display: flex;
+    }
+    #menu{
+        height: 330px;
+        padding: 0px;
+        display: none;
+        flex-direction: column;
+        background-color: #DDD;
+        border-bottom: 4px solid #555;
+    }
+    .item_menu:nth-of-type(1){
+        border-right: 0px;
+    }
+    .item_menu:nth-of-type(4){
+        border-left: 0px;
+    }
+    .item_menu{
+        width: 100%;
+        border-right: 0px;
+        border-left: 0px;
+        border-bottom: 2px solid #444;
+        border-radius: 5px;
+    }
+    #container{
+        flex-direction: column;
+    }
+    #categorias{
+        height: inherit;
+        margin: 0px;
+        min-width: 100px;
+    }
+    #span{
+        width: 100%;
+        height: 40px;
+        padding-left: 10px;
+        border-radius: 5px 0px 0px 5px;
+        border-bottom: 0px;
+        background-image: url(../img/menu.png);
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        font-size: 1.2rem;
+    }
+    .instrumento_categoria{
+        display: none;
+    }
+    .search-form {
+        display: none;
+    }
+    #float{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: -40px;
+    }
+    .search-form2 {
+        width: 75%;
+        border-radius: 0px 5px 5px 0px;
+        display: flex;
+    }
+    #produtos{
+        width: 100%;
+    }
+    .modal-content {
+        width: 98%;
+    }
+}
+@media only screen and (max-width: 412px){
+    #logo{
+        height: 200px;
+    }
+}

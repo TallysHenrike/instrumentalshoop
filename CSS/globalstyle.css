@@ -1,0 +1,71 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed');
+/* Configurações globais
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #555;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: 'Fira Sans Condensed', sans-serif;
+}
+/* Tipografia
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+span {
+  color: #333;
+  font-weight: 700;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  line-height: 1;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3.4rem;
+}
+h3 {
+  font-size: 2.8rem;
+}
+h4 {
+  font-size: 2.2rem;
+}
+h5 {
+  font-size: 1.6rem;
+}
+h6 {
+  font-size: 1.4rem;
+}
+p {
+  line-height: 1;
+}
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+  color: #000;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: #ef8b20;
+}
+a:visited {
+  text-decoration:underline;
+}
