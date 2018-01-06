@@ -14,16 +14,16 @@
         </header>
         <div id="pagina">
             <div id="menu-hidden" onclick="menuResponsivo()"><span>MENU</span><img src="img/menu.png"/></div>
-            <div id="menu">
+            <nav id="menu">
                 <a href="index.html" class="animated lightSpeedIn item_menu">HOME</a>
                 <a href="categorias.html" class="animated lightSpeedIn item_menu">Categorias</a>
                 <a href="#" class="animated lightSpeedIn item_menu">Nossa&nbsp;Loja</a>
                 <a href="#" class="animated lightSpeedIn item_menu">Contato</a>
-            </div>
+            </nav>
             <div id="container">
                 <div id="float">
                     <form class="search-form2">
-                        <input type="text" placeholder="Faba uma busca...">
+                        <input type="search" class="search-first" onkeyup="busca(event, 'search-first')" placeholder="Search for names.." title="Type in a name">
                     </form>
                 </div>
                 <div id="categorias">
@@ -37,177 +37,287 @@
                     <div class="instrumento_categoria"><a href="#produtos" onclick="produto(event, 'guitarra'); categorias()"><h6 class="animated fadeInUp">Guitarra</h6></a></div>
                     <div class="instrumento_categoria"><a href="#produtos" onclick="produto(event, 'baixo'); categorias()"><h6 class="animated fadeInUp">Contra Baixo</h6></a></div>
                     <form class="search-form">
-                        <input type="text" placeholder="Faba uma busca...">
+                        <input type="search" class="search-second" onkeyup="busca(event, 'search-second')" placeholder="Search for names.." title="Type in a name">
                     </form>
                 </div>
-                <div id="produtos">
-                    <section id="flex">
-                        <div class="animated bounceIn produto violao giannini_flat" onclick="startModal(event, 'first')"><h5 class="preco">preço: R$5,00</h5></div>
+                <div id="container-produtos">
+                    <section id="produtos">
+                        <div class="animated bounceIn produto violao giannini_flat" onclick="startModal(event, 'first')">
+							<h5 class="preco">Nome do produto</h5>
+							<span>violao giannini flat violão</span>
+							<div class="produto_footer"><a href="#">Comprar</a></div>
+						</div>
                         <div class="animated fadeIn modal first">
                             <!-- Modal content -->
                             <div class=" animated bounceInUp modal-content">
                                 <div class="modal-header">
                                     <span class="close">&times;</span>
-                                    <h2>Modal Header1</h2>
+                                    <h3>Nome do produto</h3>
                                 </div>
                                 <div class="modal-body">
                                     <div class="produto violao giannini_flat"></div>
                                     <div class="produto_especificacao">
-                                        <h6>nome do produto</h6>
-                                        <p>Descrição do produto</p>
+                                        <h5>Preço: R$5,00</h5>
+                                        <button class="accordion">Descrição</button>
+										<div class="panel">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+										</div>
+										<button class="accordion">Detalhes</button>
+										<div class="panel">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+										</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="animated bounceIn produto baixo sunburst_tagima" onclick="startModal(event, 'second')"><h5 class="preco">preço: R$5,00</h5></div>
+                        <div class="animated bounceIn produto baixo sunburst_tagima" onclick="startModal(event, 'second')">
+							<h5 class="preco">Nome do produto</h5>
+							<span>baixo sunburst tagima</span>
+							<div class="produto_footer"><a href="#">Comprar</a></div>
+						</div>
                         <div class="animated fadeIn modal second">
                             <!-- Modal content -->
                             <div class=" animated bounceInUp modal-content">
                                 <div class="modal-header">
                                     <span class="close">&times;</span>
-                                    <h2>Modal Header2</h2>
+                                    <h3>Nome do produto</h3>
                                 </div>
                                 <div class="modal-body">
                                     <div class="produto baixo sunburst_tagima"></div>
                                     <div class="produto_especificacao">
-                                        <h6>nome do produto</h6>
-                                        <p>Descrição do produto</p>                                        
+                                        <h5>Preço: R$5,00</h5>
+                                        <button class="accordion">Descrição</button>
+										<div class="panel">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+										</div>
+										<button class="accordion">Detalhes</button>
+										<div class="panel">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+										</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="animated bounceIn produto teclado casio_ctk" onclick="startModal(event, 'third')"><h5 class="preco">preço: R$5,00</h5></div>
+                        <div class="animated bounceIn produto teclado casio_ctk" onclick="startModal(event, 'third')">
+							<h5 class="preco">Nome do produto</h5>
+							<span>teclado casio ctk</span>
+							<div class="produto_footer"><a href="#">Comprar</a></div>
+						</div>
                         <div class="animated fadeIn modal third">
                             <!-- Modal content -->
                             <div class=" animated bounceInUp modal-content">
                                 <div class="modal-header">
                                     <span class="close">&times;</span>
-                                    <h2>Modal Header3</h2>
+                                    <h3>Nome do produto</h3>
                                 </div>
                                 <div class="modal-body">
                                     <div class="produto teclado casio_ctk"></div>
                                     <div class="produto_especificacao">
-                                        <h6>nome do produto</h6>
-                                        <p>Descrição do produto</p>
+                                        <h5>Preço: R$5,00</h5>
+                                        <button class="accordion">Descrição</button>
+										<div class="panel">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+										</div>
+										<button class="accordion">Detalhes</button>
+										<div class="panel">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+										</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="animated bounceIn produto teclado akai_mpk" onclick="startModal(event, 'fourth')"><h5 class="preco">preço: R$5,00</h5></div>
+                        <div class="animated bounceIn produto teclado akai_mpk" onclick="startModal(event, 'fourth')">
+							<h5 class="preco">Nome do produto</h5>
+							<span>teclado akai mpk</span>
+							<div class="produto_footer"><a href="#">Comprar</a></div>
+						</div>
                         <div class="animated fadeIn modal fourth">
                             <!-- Modal content -->
                             <div class=" animated bounceInUp modal-content">
                                 <div class="modal-header">
                                     <span class="close">&times;</span>
-                                    <h2>Modal Header4</h2>
+                                    <h3>Nome do produto</h3>
                                 </div>
                                 <div class="modal-body">
                                     <div class="produto teclado akai_mpk"></div>
                                     <div class="produto_especificacao">
-                                        <h6>nome do produto</h6>
-                                        <p>Descrição do produto</p>
+                                        <h5>Preço: R$5,00</h5>
+                                        <button class="accordion">Descrição</button>
+										<div class="panel">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+										</div>
+										<button class="accordion">Detalhes</button>
+										<div class="panel">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+										</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="animated bounceIn produto bateria dixion_riot" onclick="startModal(event, 'fifth')"><h5 class="preco">preço: R$5,00</h5></div>
+                        <div class="animated bounceIn produto bateria dixion_riot" onclick="startModal(event, 'fifth')">
+							<h5 class="preco">Nome do produto</h5>
+							<span>bateria dixion riot</span>
+							<div class="produto_footer"><a href="#">Comprar</a></div>
+						</div>
                         <div class="animated fadeIn modal fifth">
                             <!-- Modal content -->
                             <div class=" animated bounceInUp modal-content">
                                 <div class="modal-header">
                                     <span class="close">&times;</span>
-                                    <h2>Modal Header5</h2>
+                                    <h3>Nome do produto</h3>
                                 </div>
                                 <div class="modal-body">
                                     <div class="produto bateria dixion_riot"></div>
                                     <div class="produto_especificacao">
-                                        <h6>nome do produto</h6>
-                                        <p>Descrição do produto</p>
+                                        <h5>Preço: R$5,00</h5>
+                                        <button class="accordion">Descrição</button>
+										<div class="panel">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+										</div>
+										<button class="accordion">Detalhes</button>
+										<div class="panel">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+										</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="animated bounceIn produto baixo sanders" onclick="startModal(event, 'sixth')"><h5 class="preco">preço: R$5,00</h5></div>
+                        <div class="animated bounceIn produto baixo sanders" onclick="startModal(event, 'sixth')">
+							<h5 class="preco">Nome do produto</h5>
+							<span>baixo sanders</span>
+							<div class="produto_footer"><a href="#">Comprar</a></div>
+						</div>
                         <div class="animated fadeIn modal sixth">
                             <!-- Modal content -->
                             <div class=" animated bounceInUp modal-content">
                                 <div class="modal-header">
                                     <span class="close">&times;</span>
-                                    <h2>Modal Header6</h2>
+                                    <h3>Nome do produto</h3>
                                 </div>
                                 <div class="modal-body">
                                     <div class="produto baixo sanders"></div>
                                     <div class="produto_especificacao">
-                                        <h6>nome do produto</h6>
-                                        <p>Descrição do produto</p>
+                                        <h5>Preço: R$5,00</h5>
+                                        <button class="accordion">Descrição</button>
+										<div class="panel">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+										</div>
+										<button class="accordion">Detalhes</button>
+										<div class="panel">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+										</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="animated bounceIn produto guitarra tagima_memphis" onclick="startModal(event, 'seventh')"><h5 class="preco">preço: R$5,00</h5></div>
+                        <div class="animated bounceIn produto guitarra tagima_memphis" onclick="startModal(event, 'seventh')">
+							<h5 class="preco">Nome do produto</h5>
+							<span>guitarra tagima memphis</span>
+							<div class="produto_footer"><a href="#">Comprar</a></div>
+						</div>
                         <div class="animated fadeIn modal seventh">
                             <!-- Modal content -->
                             <div class=" animated bounceInUp modal-content">
                                 <div class="modal-header">
                                     <span class="close">&times;</span>
-                                    <h2>Modal Header7</h2>
+                                    <h3>Nome do produto</h3>
                                 </div>
                                 <div class="modal-body">
                                     <div class="produto guitarra tagima_memphis"></div>
                                     <div class="produto_especificacao">
-                                        <h6>nome do produto</h6>
-                                        <p>Descrição do produto</p>
+                                        <h5>Preço: R$5,00</h5>
+                                        <button class="accordion">Descrição</button>
+										<div class="panel">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+										</div>
+										<button class="accordion">Detalhes</button>
+										<div class="panel">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+										</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="animated bounceIn produto violao fender_dreadnought" onclick="startModal(event, 'eighth')"><h5 class="preco">preço: R$5,00</h5></div>
+                        <div class="animated bounceIn produto violao fender_dreadnought" onclick="startModal(event, 'eighth')">
+							<h5 class="preco">Nome do produto</h5>
+							<span>violao violão fender dreadnought</span>
+							<div class="produto_footer"><a href="#">Comprar</a></div>
+						</div>
                         <div class="animated fadeIn modal eighth">
                             <!-- Modal content -->
                             <div class=" animated bounceInUp modal-content">
                                 <div class="modal-header">
                                     <span class="close">&times;</span>
-                                    <h2>Modal Header8</h2>
+                                    <h3>Nome do produto</h3>
                                 </div>
                                 <div class="modal-body">
                                     <div class="produto violao fender_dreadnought"></div>
                                     <div class="produto_especificacao">
-                                        <h6>nome do produto</h6>
-                                        <p>Descrição do produto</p>
+                                        <h5>Preço: R$5,00</h5>
+                                        <button class="accordion">Descrição</button>
+										<div class="panel">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+										</div>
+										<button class="accordion">Detalhes</button>
+										<div class="panel">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+										</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="animated bounceIn produto bateria roland_td-1k" onclick="startModal(event, 'ninth')"><h5 class="preco">preço: R$5,00</h5></div>
+                        <div class="animated bounceIn produto bateria roland_td-1k" onclick="startModal(event, 'ninth')">
+							<h5 class="preco">Nome do produto</h5>
+							<span>bateria roland td 1k</span>
+							<div class="produto_footer"><a href="#">Comprar</a></div>
+						</div>
                         <div class="animated fadeIn modal ninth">
                             <!-- Modal content -->
                             <div class=" animated bounceInUp modal-content">
                                 <div class="modal-header">
                                     <span class="close">&times;</span>
-                                    <h2>Modal Header</h2>
+                                    <h3>Nome do produto</h3>
                                 </div>
                                 <div class="modal-body">
                                     <div class="produto bateria roland_td-1k"></div>
                                     <div class="produto_especificacao">
-                                        <h6>nome do produto</h6>
-                                        <p>Descrição do produto</p>
+                                        <h5>Preço: R$5,00</h5>
+                                        <button class="accordion">Descrição</button>
+										<div class="panel">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+										</div>
+										<button class="accordion">Detalhes</button>
+										<div class="panel">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+										</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="animated bounceIn produto guitarra strato_winner" onclick="startModal(event, 'tenth')"><h5 class="preco">preço: R$5,00</h5></div>
+                        <div class="animated bounceIn produto guitarra strato_winner" onclick="startModal(event, 'tenth')">
+							<h5 class="preco">Nome do produto</h5>
+							<span>guitarra strato winner</span>
+							<div class="produto_footer"><a href="#">Comprar</a></div>
+						</div>
                         <div class="animated fadeIn modal tenth">
                             <!-- Modal content -->
                             <div class=" animated bounceInUp modal-content">
                                 <div class="modal-header">
                                     <span class="close">&times;</span>
-                                    <h2>Modal Header9</h2>
+                                    <h3>Nome do produto</h3>
                                 </div>
                                 <div class="modal-body">
                                     <div class="produto guitarra strato_winner"></div>
                                     <div class="produto_especificacao">
-                                        <h6>nome do produto</h6>
-                                        <p>Descrição do produto</p>
+                                        <h5>Preço: R$5,00</h5>
+                                        <button class="accordion">Descrição</button>
+										<div class="panel">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+										</div>
+										<button class="accordion">Detalhes</button>
+										<div class="panel">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+										</div>
                                     </div>
                                 </div>
                             </div>
@@ -217,6 +327,28 @@
             </div>
         </div>
         <footer></footer>
+		<script>
+			function busca(evt, item) {
+			    let input, filter, produtos, produto, a;
+			    input = document.getElementsByClassName(item);
+				for (let search = 0; search < input.length; search++) {
+					filter = input[search].value.toUpperCase();
+				}
+			    produtos = document.getElementById("produtos");
+			    produto = produtos.getElementsByClassName("produto");
+			    for (let i = 0; i < produto.length; i++) {
+			        span = produto[i].getElementsByTagName("span");
+					for (let palavra = 0; palavra < span.length; palavra++) {
+						if (span[palavra].innerHTML.toUpperCase().indexOf(filter) > -1) {
+							produto[i].style.display = "flex";
+						} else {
+							produto[i].style.display = "none";
+
+						}
+					}
+			    }
+			}
+		</script>
         <script src="js/menu.js">// MENU </script>
         <script src="js/categorias.js">// CATEGORIAS </script>
         <script src="js/modal.js">// MODAL </script>

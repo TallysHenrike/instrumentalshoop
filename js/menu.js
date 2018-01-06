@@ -6,15 +6,15 @@ function menuResponsivo() {
         x.style.display = 'flex';
     }
 }
-var x = document.querySelectorAll('.instrumento_categoria');
-let categorias = document.getElementById('span');
+
 if (innerWidth <= 768){
-    categorias.onclick = function () {
+    function categorias() {
+        var x = document.querySelectorAll('.instrumento_categoria');
         for (let i = 0; i < x.length; i++) {
-            if (x[i].style.display === 'none') {
-                x[i].style.display = 'block';
-            } else {
+            if (x[i].style.display === 'block') {
                 x[i].style.display = 'none';
+            } else {
+                x[i].style.display = 'block';
             };
         };
     };

@@ -5,7 +5,7 @@ header{
     width: 100%;
     height:inherit;
     background: black url(../img/banner.jpg) no-repeat right;
-    box-shadow: 2px 2px 10px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 #logo{
     height: 320px;
@@ -23,14 +23,14 @@ header:after {
     height:inherit;
     margin: auto;
     margin-top: -30px;
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 3px 3px 0px 0px;
 }
 /* MENU */
 #menu-hidden{
     width: 100%;
     height: 60px;
     padding-left: 30px;
-    border-radius: 5px;
+    border-radius: 3px;
     background-color: #555;
     display: none;
     align-items: center;
@@ -43,13 +43,13 @@ header:after {
 #menu{
     width: 100%;
     height: 60px;
-    border-radius: 5px;
+    border-radius: 3px;
     background-color: #555;
     display: flex;
     flex-direction: row;
     justify-content:space-around;
     align-items: center;
-    box-shadow: 2px 2px 10px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 .item_menu{
     width: 100%;
@@ -69,34 +69,35 @@ header:after {
     border-left: 1px solid #444;
 }
 /* SLIDESHOW */
-.produto-slide {
-    display:none;
-    justify-content:space-around;
-    width: 90%;
-    height: 320px;
-    background-color: #fff;
-}
+.mySlides {display:none}
+
 /* Slideshow container */
 .slideshow-container {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    box-shadow: 2px 2px 10px;
-    background-color: #0ff;
+	display: flex;
+	justify-content: center;
 }
-.alternacao{
-    width: 5%;
-    text-align: center;
-    font-size: 4rem;
+.produto-slide{
+    flex-basis: 30vw;
+    height: 300px;
+    background-size: 100% auto;    
+    border-radius: 3px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    background-repeat: no-repeat;
+    background-position: center;
 }
-.alternacao a{
-    width: 100%;
-    height: 100%;
-    display: block;
-    cursor: pointer;
+/* The dots/bullets/indicators */
+.dot {
+	height: 13px;
+	width: 13px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.active {
+	background-color: #717171;
 }
 /* CATEGORIAS */
 #container{
@@ -104,21 +105,25 @@ header:after {
     display: flex;
     flex-direction: row;
 }
+#container iframe{
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 3px;
+}
 #categorias{
     width: 25%;
-    margin: 10px 0px;
-    border-radius: 5px;
+    margin: 10px;
+    border-radius: 3px;
     background-color: #ddd;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 2px 2px 10px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 #span{
     width: 100%;
     height: 40px;
     padding-left: 10px;
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 3px 3px 0px 0px;
     border-bottom: 4px solid #ef3b20;
     display: flex;
     align-items: center;
@@ -144,33 +149,35 @@ header:after {
 /*----- Search -----*/
 .search-form {
     width: 90%;
-    box-shadow: 2px 2px 10px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     display: flex;
 } 
-.search-form input[type="text"] {
+.search-form input[type="search"] {
     width:100%;
     height:30px;
     padding:0px 8px;
     border-radius:5px;
     font-size:13px;
+	outline: none;
 }
 .search-form2 {
     display: none;
-    box-shadow: 2px 2px 10px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     margin-left: 100px;
     padding: 0px 8px;
 }
-.search-form2 input[type="text"] {
+.search-form2 input[type="search"] {
     width:100%;
     height:40px;
     border-radius:5px 0px 0px 5px;
     font-size:13px;
+	outline: none;
 }
 /* produtos */
-#produtos{
-    width: 75%;
+#container-produtos{
+    width: 100%;
 }
-#flex{
+#produtos{
     display: flex;
     flex-flow: row wrap;
     align-items:center;
@@ -178,20 +185,23 @@ header:after {
 }
 .produto{
     cursor: pointer;
-    flex: auto;
     display: flex;
-    flex-direction:column;
-    justify-content:space-between;
+	flex-wrap: wrap;
     align-items:center;
-    max-width: 350px;
-    width: 250px;
+	align-content: space-between;
+    max-width: 400px;
+	min-width: 200px;
+    flex-basis: 250px;
     height: 300px;
     margin: 10px;
     background-size: 100% auto;    
-    border-radius: 5px;
-    box-shadow: 2px 2px 10px;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     background-repeat: no-repeat;
     background-position: center;
+}
+.produto span {
+	display: none
 }
 
 /* The Modal (background) */
@@ -211,11 +221,13 @@ header:after {
 /* Modal Content */
 .modal-content {
     position: fixed;
-    border-radius: 5px;
+    border-radius: 3px;
     bottom: 0;
-    box-shadow: 2px 2px 10px;
+	overflow: auto;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     background-color: #fefefe;
     width: 70%;
+	max-height: 80vh;
     -webkit-animation-name: slideIn;
     -webkit-animation-duration: 0.4s;
     animation-name: slideIn;
@@ -236,27 +248,64 @@ header:after {
 }
 .modal-header {
     padding: 2px 16px;
-    box-shadow: 2px 2px 10px;
-    border-radius: 5px 5px 0px 0px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 3px 3px 0px 0px;
     background-color: #0ff;
 }
 .modal-body {
     display: flex;
     justify-content: space-around;
+	flex-flow: row wrap;
     padding: 2px 16px;
+}
+.accordion {
+	background-color: #eee;
+	color: #444;
+	cursor: pointer;
+	min-height: 50px;
+	padding: 0px 15px;
+	margin: 5px;
+	width: 100%;
+	text-align: left;
+	outline: none;
+	transition: 0.4s;
+}
+.accordion.active, .accordion:hover {
+	background-color: #ddd;
+}
+.accordion:after {
+	content: '\002B';
+	color: #777;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+}
+.accordion.active:after {
+	content: "\2212";
+}
+.panel {
+	background-color: white;
+	max-height: 0;
+	padding: 0px 15px;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
 }
 .produto_especificacao{
     flex: auto;
     display: flex;
     flex-direction:column;
-    justify-content:space-around;
+    justify-content:center;
     align-items:center;
     max-width: 500px;
-    height: 300px;
+	flex-grow: 1;
+    height: inherit;
     margin: 10px;
-    border: 2px solid #555;
-    -webkit-animation: fadeEffect 1s;
-    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	border-radius: 3px;
+}
+.produto_especificacao h5{
+	position: absolute;
+	top: 55px
 }
 
 .preco{
@@ -264,10 +313,31 @@ header:after {
     align-items: center;
     justify-content: center;
     width: 100%;
+	position: absolute;
+	top: 0px;
     height: 50px;
     background-color: #0ff;
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 3px 3px 0px 0px;
     border-bottom: 3px solid rgba(0,0,0,.2);
+}
+.produto_footer{
+    width: 100%;
+	position: absolute;
+	bottom: 0px;
+	height: 50px;
+	padding-left: 5px;
+    background-color: #eee;
+	color: #444;
+    border-radius: 0px 0px 3px 3px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.produto_footer:hover {
+	background-color: #ddd;
+}
+.produto_footer a{
+	display: block;
+	width: 100%;
+	height: 100%;
 }
 /* violao */
 .giannini_flat{
@@ -314,7 +384,7 @@ footer{
     height: 200px;
     margin-top: 10px;
     background: #555;
-    box-shadow: 2px 2px 10px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 /* RESPONSIVO */
 @media only screen and (max-width: 768px){
@@ -346,7 +416,7 @@ footer{
         border-right: 0px;
         border-left: 0px;
         border-bottom: 2px solid #444;
-        border-radius: 5px;
+        border-radius: 3px;
     }
     #container{
         flex-direction: column;
@@ -390,7 +460,12 @@ footer{
     }
     .modal-content {
         width: 98%;
+		height: 80vh;
     }
+	.produto-slide{
+    	flex-basis: 90vw;
+		height: 400px;
+	}
 }
 @media only screen and (max-width: 412px){
     #logo{

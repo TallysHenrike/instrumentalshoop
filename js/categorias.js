@@ -6,10 +6,8 @@ function todos() {
     };
 };
 function produto(evt, item) {
-    // Declare all variables
     var i, tabcontent;
 
-    // Get all elements with class="tabcontent" and hide them
     tabcontent = document.getElementsByClassName("produto");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
